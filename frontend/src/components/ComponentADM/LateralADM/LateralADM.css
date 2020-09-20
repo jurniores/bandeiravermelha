@@ -1,0 +1,22 @@
+.lateral-adm-principal{   
+    width: 100%;
+    
+}
+.lateral-adm-ul{
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 520px;
+
+}
+
+.lateral-adm-li{
+    background-color: rgba(0, 0, 0, 0.473);
+    padding: 10px;
+    display: inline-block;
+    margin: 2px;
+    color: white;
+    border-left: 3px solid white;
+
+}
+

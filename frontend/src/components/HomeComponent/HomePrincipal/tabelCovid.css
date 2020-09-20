@@ -1,0 +1,50 @@
+.tabela-covid {
+    display: flex;
+    width: 100%;
+    background-color: rgba(240, 11, 11, 0.514);
+    border-radius: 10px;
+    min-height: 100px;
+    padding: 30px 0;
+    flex-wrap: wrap;
+    font-size: 11pt;
+    font-family: 'Roboto Slab', sans-serif;
+    
+}
+.div-covid{
+    width: 100%;
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: bold;
+    font-size: 20pt;
+    text-align: center;
+}
+
+.tabela-covid  span{
+    padding: 10px;
+    font-weight: bold;
+    
+}
+.tabela-nome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tabela-pais {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-items: right;
+}
+
+
+.div-dados{
+    flex: 1;
+    width: 100%;
+
+    min-height: 30px;
+    background-color: white;
+    margin: 10px 10px;
+    border-radius: 4px;
+    padding: 5px 10px;
+    text-align: justify;
+    
+}

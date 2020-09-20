@@ -1,0 +1,51 @@
+.noticiasPath-divPrincipal{
+    margin: 50px 30px;
+    display: flex;
+    font-family: 'Roboto Slab', sans-serif; 
+    
+}
+.noticiaPath-divSecundaria-block{
+    width: 1000px;
+    
+}
+.noticiaPath-divSecundaria-block-img{
+    max-width:80%;
+    max-height: 600px;
+    display: block;
+    margin: 20px auto;
+
+}
+.noticiaPath-divSecundaria-title{
+    font-size: 25pt;
+    font-weight: bold;
+    margin: 50px auto;
+    text-align: justify;
+    width: 80%
+}
+.noticiaPath-divSecundaria-desc{
+    text-align: center;
+    font-size: 14pt;
+    font-weight: bold;
+    color: rgb(100, 100, 100);
+    margin: 20px auto;
+    text-align: justify;
+    
+    width: 80%
+
+}
+.noticiaPath-divSecundaria-text{
+    margin: 20px auto;
+    text-align: justify;
+    font-size: 12pt;
+    width: 80%;
+    line-height: 1.4;
+    word-spacing: 4px;
+}
+.noticiaPath-divSecundaria-block__aside{
+    margin-left: 30px;
+    width: 400px;
+
+}
+.views-postagem-noticias-path{
+    color: red;
+}

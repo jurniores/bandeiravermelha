@@ -1,0 +1,23 @@
+.carregando-component{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    margin: 0 auto;
+    display: flex;
+}
+
+.carregando-component img{
+    width: 40px;
+    height: 40px;
+    animation-name: animaDelay;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    margin:auto auto;
+}
+
+@keyframes animaDelay{
+    to{transform: rotate(360deg)}
+}

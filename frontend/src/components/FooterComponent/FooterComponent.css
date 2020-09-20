@@ -1,0 +1,56 @@
+footer{
+    font-family: 'Roboto Slab', sans-serif; 
+    height: 250px;
+    margin-top: 20px;
+    background: linear-gradient(rgb(253, 24, 24), red);
+    position: relative;
+}
+
+.div-footer{
+    display: flex;
+    margin: 0 30px;
+    background: linear-gradient(rgb(253, 24, 24), rgb(179, 2, 2));
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.ul-1 li{
+    list-style: none;
+    padding: 5px;
+    font-size: 16pt;
+}
+.ul-2 li{
+    list-style: none;
+    padding: 5px;
+    font-size: 16pt;
+}
+.ul-2 li:hover{
+    color:white;
+    cursor: pointer;
+}
+.ul-1 li:hover{
+    color:white;
+    cursor: pointer;
+}
+.redes-sociais li {
+    display: inline-block;
+    padding-right:20px;
+    font-size: 22pt;
+    cursor: pointer;
+}
+.redes-sociais li:hover {
+    color: white;
+    
+    
+}
+footer span{
+    position: absolute;
+    bottom: 5%;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}

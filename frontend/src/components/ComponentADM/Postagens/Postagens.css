@@ -1,0 +1,59 @@
+.postagem-principal-adm{
+    display: flex;
+    position: relative;
+    
+}
+.postagem-lateral-esquerda form{
+    display: flex;
+    flex-direction: column;
+}
+
+.postagem-lateral-esquerda select{
+    margin-left: 10px;
+    padding: 3px;
+}
+.postagem-lateral-esquerda input{
+    margin: 10px;
+    height: 30px;
+    padding: 3px;
+    font-size: 13pt;
+}
+.postagem-lateral-direita{
+    width: 50%;
+    margin-left: 30px;
+}
+.postagem-lateral-direita textarea{
+    margin-top: 10px;
+    width: 100%;
+    height: 400px;
+    padding: 10px;
+    font-size: 13pt;
+}
+#button-submit{
+    border-radius: 4px;
+    border: none;
+    outline-color:red;
+    background-color: rgba(35, 218, 35, 0.479);
+}
+.label-img{
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 4px;
+    background-color: rgba(128, 128, 128, 0.432);
+}
+.file-img{
+    display: none;
+}
+.editor-texto{
+    position: absolute;
+    right: 0%;
+    top: 30%;
+    background: rgb(0, 0, 255);
+    color: white;
+    border-top-left-radius: 4px;
+    padding: 10px;
+    font-weight: bold;
+    border-bottom-left-radius: 4px;
+}

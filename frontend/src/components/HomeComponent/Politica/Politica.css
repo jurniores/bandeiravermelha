@@ -1,0 +1,83 @@
+
+.div-principal{
+    display: flex;
+    font-family: 'Roboto Slab', sans-serif; 
+    height: 400px;
+    
+}
+.div-principal span{
+    display: block;
+}
+
+.div-principal__maior{
+    width: 50%;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+
+}
+.div-principal__maior img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.2s;
+}
+.div-principal__maior img:hover{
+    transform: scale(1.1);
+}
+.div-principal__maior-primeira{
+    height: 50%;
+    width: 100%;
+    flex: 1;   
+    display: flex;
+}
+.space{
+    margin-bottom: 5px;
+}
+.div-principal__maior-primeira-interno{
+    width: 25%;
+    flex: 1;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    
+    
+}
+.div-principal__maior-primeira-interno img{
+    width: 100%;
+    transition: 0.3s;
+}
+.div-principal__maior-primeira-interno img:hover{
+    transform:scale(1.1)
+}
+.spacing-bottom{
+    margin-bottom: 20px;
+}
+.spacing-right{
+    margin-right: 5px;
+}
+.div-titulo{
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    font-size: 16pt;
+    
+}
+.div-tipo{
+    background-color: red;
+    padding: 4px 10px;
+    color: white;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    font-weight: bold;
+}
+
+.size{
+    font-size: 22pt;
+}

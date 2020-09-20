@@ -1,0 +1,52 @@
+.div-todas-matérias{
+    margin: 50px 10px 50px 0;
+}
+.div-destaque{
+    height: 450px;
+    display: flex;
+    margin-top: 50px;
+}
+
+.materiaPrincipal{
+    width: 25%;
+    margin-left: 10px;
+    position: relative;
+    overflow: hidden;
+    
+}
+.materiaPrincipal img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.3s;
+    
+}
+.materiaPrincipal img:hover{
+    transform: scale(1.1);
+}
+
+.tipo-principal-centro {
+    background-color: red;
+    padding: 4px 10px;
+    color: white;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    font-weight: bold;
+    font-size: 14pt;
+    
+}
+
+.titulo-principal-centro{
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    position: absolute;
+    bottom: 15%;
+    left: 5%;
+    font-size: 16pt;
+    text-align: left;
+
+}
+.space-destaque{
+    margin-right: 10px;
+}

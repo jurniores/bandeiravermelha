@@ -1,0 +1,44 @@
+.component-relacionados-principal{
+    margin: 50px auto;
+    text-align: justify;
+    font-size: 14pt;
+    width: 80%;
+    font-family: 'Roboto Slab', sans-serif; 
+
+}
+.recomendado-para-você{
+    margin: 20px 0;
+    background-color: rgb(253, 27, 27);
+    padding: 10px;
+    color: white;
+}
+.component-relacionados-principal-2{
+    display: flex;
+    justify-content: space-between;
+}
+.component-relacionados-div{
+    width: 32%;
+    margin: 0;
+    padding: 0;
+}
+.div-da-imagem{
+    width: 100%;
+    height: 180px;
+    text-align: justify;
+}
+
+.img-relacionados{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.component-relacionados-div-titulo{
+    padding: 4px;
+    font-size: 13px;
+    font-weight:bold;
+    text-align: justify;
+}
+.component-relacionados-div-data{
+    font-size: small;
+    padding: 15px 0 0 4px;
+}

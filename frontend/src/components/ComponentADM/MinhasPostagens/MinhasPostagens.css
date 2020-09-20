@@ -1,0 +1,99 @@
+.minhaspostagens-principal{
+    position: relative;
+}
+.div-principal-minhaspostagens{
+    margin: 10px auto;
+    height: 500px;
+    overflow: auto;
+}
+.todas-postagens-adm{
+    width: 450px;
+    margin: 10px auto;
+    background-color: aliceblue;
+    padding: 5px;
+    text-align: center;
+}
+.todas-postagens-adm div{
+    margin: 3px;
+}
+.todas-postagens-adm a{
+    color: unset;
+    text-decoration: none;
+}
+
+.postagem-adm-title{
+    font-weight: 600;
+    color: blue;
+}
+
+.postagem-adm-views{
+    font-size: small;
+    color: red;
+}
+.postagem-adm-desc{
+    font-weight: bold;
+}
+.deleta-edita{
+    justify-content: center;
+    display:flex;
+}
+.deleta-edita div{
+    padding: 3px;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.deleta-postadm{
+    background: rgba(255, 0, 0, 0.603);
+    
+}
+.deleta-postadm:hover{
+    background: rgb(255, 0, 0);
+}
+
+.edita-postadm{
+    background: rgba(0, 68, 255, 0.616);
+}
+.edita-postadm:hover{
+    background: rgb(0, 68, 255);
+
+}
+.apagando-post{
+    width: 60px;
+    margin: 0 auto;
+}
+.ativa-delete{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(199, 46, 46, 0.918);
+}
+.ativa-delete-div-secundaria{
+   border-radius: 4px;
+   margin: 200px auto;
+   display: flex;
+   flex-direction: column;
+   width: 360px;
+   height: 200px;
+   background-color: white;
+   text-align: center;
+   align-items: center;
+}
+
+.ativa-delete-div-secundaria button{
+    margin: 5px;
+    width: 100px;
+    border: none;
+    font-weight: bold;
+    color: white;
+    background-color: red;
+}
+.div-delete-pergunta{
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}

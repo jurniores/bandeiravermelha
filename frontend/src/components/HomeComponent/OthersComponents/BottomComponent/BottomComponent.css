@@ -1,0 +1,55 @@
+.div-block {
+    text-align: center;
+    font-size: 30pt;
+    font-family: 'Roboto Slab', sans-serif;
+    margin-bottom: 100px;
+    
+}
+.div-block  a{
+    text-decoration: none;
+}
+.div-bottom-inicial {
+    display: flex;
+    justify-content: space-between;
+
+}
+.space1{
+    margin: 10px;
+}
+.bottom-div-propriedades img{
+    width: 100%;
+    transition: 0.3s;
+}
+.bottom-div-propriedades img:hover{
+    transform: scale(1.02);
+}
+.bottom-div-propriedades{
+    flex: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+
+.title-bottom {
+    font-size: 16pt;
+    font-weight: bold;
+    color: red;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+
+}
+.desc-bottom {
+    font-size: 15pt;
+    font-weight: bold;
+    color: rgb(87, 85, 85);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+}
+.bottom-div-propriedades div{
+    margin-top: 10px;
+}
