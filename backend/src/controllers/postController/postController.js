@@ -1,6 +1,10 @@
+const fs = require("fs");
+const { resolve } = require('path');
 const Post = require('../../models/PostsModel/PostsModel');
 const View = require('../../models/ViewsModel/ViewsModel');
+const Fotos = require('../../models/FotosModel/FotosModel');
 const Sequelize = require('sequelize');
+
 const Op = Sequelize.Op
 
 
@@ -9,10 +13,9 @@ module.exports = {
         try{
              const post = await Post.create(req.body)
             res.status(200).json({
-                success: ['Texto Criado com sucesso!']
+                success: {post}
             })
             await View.create({ view: 1, id_post: post.id})
-            console.log(post.id)
         }
         catch(e) {
             res.status(400).json(e)
@@ -22,12 +25,15 @@ module.exports = {
     async index(req, res) {
         try {
             const posts= await Post.findAll({
-                attributes:['id','title', 'slug', 'author', 'desc', 'tipo', 'text', 'user_id'],
+                attributes:['id','title', 'slug', 'author', 'desc', 'tipo', 'text', 'user_id', 'created_at'],
                 order:[['id','desc']],
-                include: {
-                    model: View,
-                    attributes: ['id', 'view', 'date','id_post']
-                }
+                include: [{
+                    model: View
+                },{
+                    model: Fotos,
+                    attributes: ["name"]
+                }]
+    
             })
             if(!posts){
                 return res.status(400).json({
@@ -47,12 +53,14 @@ module.exports = {
 
                 const posts= await Post.findAll({
                     where: { tipo },
-                    attributes:['id','title', 'slug', 'author', 'desc', 'tipo', 'text', 'user_id'],
+                    attributes:['id','title', 'slug', 'author', 'desc', 'tipo', 'text', 'user_id', 'created_at'],
                     order:[['id','desc']],
-                    include: {
-                        model: View,
-                        attributes: ['id', 'view', 'date','id_post']
-                    }
+                    include: [{
+                        model: View
+                    },{
+                        model: Fotos,
+                        attributes: ["name"]
+                    }]
                 })
                 if(!posts){
                     return res.status(400).json({
@@ -71,11 +79,13 @@ module.exports = {
         try {
             const posts= await Post.findOne({
                 where: {slug: slug},
-                attributes:['id','title', 'slug', 'author', 'desc', 'tipo', 'text', 'user_id'],
-                include: {
-                    model:View,
-                    attributes: ['id', 'view', 'date','id_post']
-                },
+                attributes:['id','title', 'slug', 'author', 'desc', 'tipo', 'text', 'user_id', 'created_at'],
+                include: [{
+                    model: View
+                },{
+                    model: Fotos,
+                    attributes: ["name"]
+                }]
 
             })
             if(!posts){
@@ -83,8 +93,8 @@ module.exports = {
                     Error: ['Não existe postagem!']
                 })
             }
-            
             res.status(200).json(posts)
+            
         } catch (e) {
             res.status(400).json(e)
         }
@@ -92,12 +102,31 @@ module.exports = {
     async delete(req, res) {
         const { id } = req.params;
         try {
-            const posts= await Post.findByPk(id)
+            const posts= await Post.findOne({
+                where:{id},
+                include: {model: Fotos}
+            })
+            
+            
             if(!posts){
                 return res.status(400).json({
                     Error: ['Não existe postagem!']
                 })
             }
+            
+            if(posts.Foto !== null){
+                await fs.unlink(('./uploads/images/'+posts.Foto.name), (err)=>{
+                    if(err){
+                        return res.status(400),json({
+                            Errors:err
+                        })
+                    }
+                })
+            }
+              
+            
+            
+           
             await posts.destroy()
             res.status(200).json({
                 success:['Postagem exclúida com sucesso']
@@ -136,10 +165,12 @@ module.exports = {
                       
                     attributes:['id','title', 'slug', 'author', 'desc', 'tipo', 'text', 'user_id'],
                     order:[['id','desc']],
-                    include: {
-                        model: View,
-                        attributes:['id','view','id_post','date']
-                    } 
+                    include: [{
+                        model: View
+                    },{
+                        model: Fotos,
+                        attributes: ["name"]
+                    }] 
                     
                 })
                 if(!posts || posts.length===0){

@@ -67,7 +67,7 @@ function bold(n){
             break
             case 10: a.texto.value=`${valor.comeco} ${valor.meio}</br> ${valor.final}`
             break
-            case 11: a.texto.value='Errei'
+            case 11: a.texto.value=`${valor.comeco} ${valor.meio}<img src="link aqui"/> ${valor.final}`
             break
     
             default: alert('Algo errado aconteceu')

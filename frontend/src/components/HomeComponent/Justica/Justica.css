@@ -26,7 +26,7 @@
     transition: 0.2s;
 }
 .div-principal__maior img:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 .div-principal__maior-primeira{
     height: 40px;
@@ -46,10 +46,10 @@
 }
 .div-principal__maior-primeira-interno img{
     object-fit: cover;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 .div-principal__maior-primeira-interno img:hover{
-    transform:scale(1.1)
+    transform:scale(1.05)
 }
 .spacing-bottom{
     margin-bottom: 20px;
@@ -61,6 +61,7 @@
     color: white;
     text-shadow: 2px 2px 2px black;
     position: absolute;
+    overflow: hidden;
     bottom: 10%;
     left: 5%;
     font-size: 16pt;

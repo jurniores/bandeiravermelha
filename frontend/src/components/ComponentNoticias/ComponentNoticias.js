@@ -94,7 +94,7 @@ function ComponentNoticias ({tipo}) {
                 DadosPostagemTipo.map((valor,index) =>(
                     index<carregaMais&&
             <div className="component-noticias-principal__feed" key={valor.id}>
-            <Link to={`/noticias/${valor.slug}`}><img src="https://ocnoticias.com.br/wp-content/uploads/2020/08/felix.jpg"/></Link>
+            <Link to={`/noticias/${valor.slug}`}><img src={`http://143.255.73.80:3001/images/${valor.Foto.name}`}/></Link>
             <div className="component-noticias-principal__div-block">
             <div className="noticias-tipo">{valor.tipo}</div>
             <Link to={`/noticias/${valor.slug}`}><div className="noticias-titulo">{valor.title}</div></Link>
@@ -111,7 +111,7 @@ function ComponentNoticias ({tipo}) {
                 DadosPost.map((valor,index) =>(
                     index<carregaMais&&
             <div className="component-noticias-principal__feed" key={valor.id}>
-            <Link to={`/noticias/${valor.slug}`}><img src="https://ocnoticias.com.br/wp-content/uploads/2020/08/felix.jpg"/></Link>
+            <Link to={`/noticias/${valor.slug}`}><img src={`http://143.255.73.80:3001/images/${valor.Foto.name}`}/></Link>
             <div className="component-noticias-principal__div-block">
             <div className="noticias-tipo">{valor.tipo}</div>
             <Link to={`/noticias/${valor.slug}`}><div className="noticias-titulo">{valor.title}</div></Link>
@@ -136,7 +136,7 @@ function ComponentNoticias ({tipo}) {
         </div>
         
     </div>
-    {DadosPost.length>0&&<Footer />}
+    <Footer/>
     
    </> 
 

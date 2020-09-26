@@ -125,6 +125,7 @@ useEffect(()=>{
             <Link to="/"><li>Home</li></Link>
             <Link to="/noticias"><li>Notícias</li></Link>
             <Link to="/economia"><li>Economia</li></Link>
+            <Link to="/politica"><li>Política</li></Link>
             <Link to="/educacao"><li>Educação</li></Link>
                 <li className="space-between"><Link to="/justica">Justiça</Link></li>
                 <li className="rede-sociais"><a href="https://www.facebook.com/antonio.jurnior/" target="_blank" rel="noopener noreferrer"><FaFacebook size="25"/></a></li>

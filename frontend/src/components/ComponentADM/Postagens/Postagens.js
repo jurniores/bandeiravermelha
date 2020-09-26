@@ -3,6 +3,7 @@ import { toast } from 'react-toastify';
 import { useSelector, useDispatch } from 'react-redux';
 
 import Request from '../../Modules/Request/Request';
+import Axios from 'axios';
 
 import './Postagens.css'
 let users
@@ -19,10 +20,12 @@ const initialState ={
 
 function Postagens(){
     const {dadosDaPostagem} = useSelector(state=>state.EditADM)
-    const [dados, setDados ] = useState(initialState)
+    const [ dados, setDados ] = useState(initialState)
     const dispatch = useDispatch();
-    const [validaOP, setValidaOP] = useState(false)
-    const [dadosRequest, get] = Request();
+    const [ validaOP, setValidaOP] = useState(false)
+    const [dadosRequest, get ] = Request();
+    const [files, setFiles ] =useState(false)
+    const [ nameFile, setNameFile ] = useState('Enviar Foto...')
     
     function onChange(e){
         if(e.target.name === 'tipo'){
@@ -35,6 +38,10 @@ function Postagens(){
             user_id: users.id,
         [e.target.name]:e.target.value
     })
+    }
+    function FileChange(e){
+        setFiles(e.target.files[0])
+        setNameFile(<span style={{color:'white', textShadow:'3px 3px 3px black', fontSize:'15pt'}}>Selecionada!</span>)
     }
       async function Envia(){
         
@@ -60,6 +67,10 @@ function Postagens(){
             toast.warning('Insira um texto!')
             errors.push(1)
         }
+        if(!files && !dadosDaPostagem[0]) {
+            toast.warning('Insira uma imagem!')
+            errors.push(1)
+        }
         if(errors.length>0) return
         
         setValidaOP(false)
@@ -81,6 +92,7 @@ function Postagens(){
                 type:'EDIT_ADM_POST',
                 data: false
             })
+           
             return setDados(initialState)
         }
         await get({
@@ -94,7 +106,7 @@ function Postagens(){
             data:JSON.stringify(dados)
         })
         
-        
+       
         return setDados(initialState)
     }
     useEffect(()=>{
@@ -115,7 +127,19 @@ function Postagens(){
                 data: null
             })
         }
-        if(dadosRequest.success) toast.success('Post criado com sucesso!')
+        if(dadosRequest.success){
+            const formData = new FormData();
+            formData.append('foto', files)
+            formData.append('id_post', dadosRequest.success.post.id)
+            Axios.post('http://143.255.73.80:3001/images', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            })
+            setFiles(false)
+            setNameFile('Enviar Foto...')
+        toast.success('Post criado com sucesso!')
+        } 
         /*eslin-disable */
     },[dadosRequest])
 
@@ -134,10 +158,11 @@ function Postagens(){
             <option>Economia</option>
             <option>Educação</option>
             <option>Justiça</option>
+            <option>Destaque</option>
             
             
         </select>
-        <label className="label-img" htmlFor="img-post">Enviar Foto...</label><input type="file" id="img-post" className="file-img"/>
+        {!dadosDaPostagem[0]&&<><label className="label-img" htmlFor="img-post">{nameFile}</label><input type="file" id="img-post" onChange={FileChange} className="file-img"/></>}
         <input type="button" value="Enviar" id="button-submit" onClick={Envia}/>
         </form>
         </div>

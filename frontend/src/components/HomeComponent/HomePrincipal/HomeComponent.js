@@ -94,15 +94,15 @@ function HomeComponent() {
         {post&&
                 post.map((valor,indice)=>(
                     
-                    indice<12&&(<section key={valor.id} className="home-section-central2">
+                    indice<12&&(<div key={valor.id} className="home-section-central2">
                        <div className="div-img">
-                        <Link to={`/noticias/${valor.slug}`}><img src="https://ocnoticias.com.br/wp-content/uploads/2020/08/padrefilipinas2-622x420.jpg" alt="imagem de destaque secundário"/></Link>
+                        <Link to={`/noticias/${valor.slug}`}><img src={`http://143.255.73.80:3001/images/${valor.Foto.name}`} alt="imagem de destaque secundário"/></Link>
                         </div>
                         <Link to={`/noticias/${valor.slug}`}><span className="home-titulo2 display-block">{valor.title}</span></Link>
                         <Link to={`/noticias/${valor.slug}`}><span className="home-descricao2 display-block">{valor.desc}</span></Link>
                         <Link to={`/noticias/${valor.slug}`}><span className="home-data2 display-block">{valor.date}</span></Link>
                     
-                    </section>)
+                    </div>)
                 ))}
                     
         </ModeloComponent2>

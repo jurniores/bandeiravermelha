@@ -1,18 +1,17 @@
-import React, {useState, useEffect} from 'react';
-
-
+import React from 'react';
+import { Link } from 'react-router-dom';
 //minhas libs
-
-
 
 import './ComponentRelacionados.css';
 
-function ComponentRelacionados({dadosRelacionados}){
+function ComponentRelacionados({dadosRelacionados, ativa}){
 
 
-
-
-
+    function datePTBR(date){	
+        const data2 = date.split('T')
+        const dataPTBR = data2[0].split('-').reverse().join('/')
+        return dataPTBR
+    }
 
 
     return dadosRelacionados.length>3&&(
@@ -23,9 +22,10 @@ function ComponentRelacionados({dadosRelacionados}){
         
         {dadosRelacionados.map((valor,index)=>(
            index<3&&(<div key={index} className="component-relacionados-div">
-           <div className="div-da-imagem"> <img className="img-relacionados" src="https://ocnoticias.com.br/wp-content/uploads/2019/12/moscou-305x207.jpg"/></div>
+           <Link onClick={ativa} to={`/noticias/${valor.slug}`}><div className="div-da-imagem"> <img className="img-relacionados" alt="foto dos itens relacionados" src={`http://143.255.73.80:3001/images/${valor.Foto.name}`}/></div>
             <div className="component-relacionados-div-titulo">{valor.title}</div>
-           <div className="component-relacionados-div-data">13/06/2020</div>
+           <div className="component-relacionados-div-data">{datePTBR(valor.created_at)}</div>
+           </Link>
            
         </div>)
         ))}

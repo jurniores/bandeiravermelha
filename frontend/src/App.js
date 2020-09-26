@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import { Provider } from 'react-redux';
 
+
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 //Páginas
@@ -23,6 +24,7 @@ import Store from './Redux/Redux';
 function App() {
   return (
   <Provider store={Store}>
+
     <BrowserRouter>
     
     <PageHeader/>
@@ -48,6 +50,7 @@ draggable
 pauseOnHover
 />
     </BrowserRouter>
+
   </Provider> 
    
   );

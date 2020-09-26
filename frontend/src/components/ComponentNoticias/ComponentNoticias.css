@@ -16,10 +16,7 @@
 
 .component-noticias-principal__feed{
    display: flex;
-   height: 250px;
    margin-top: 20px;
-   overflow: hidden;
-   text-overflow: ellipsis;
    text-align: justify;
    border-bottom: 1px solid gray;
 
@@ -27,7 +24,9 @@
    
 }
 .component-noticias-principal__feed img{
-   width: 350px
+   width: 350px;
+   height: 220px;
+   object-fit: cover;
 
 }
 
@@ -51,7 +50,7 @@
 
 .noticias-desc{
    font-size: 15pt;
-   margin-top: 10px;
+   margin: 10px 0;
    color: rgb(87, 85, 85);
 }
 .aside-noticias-principal {

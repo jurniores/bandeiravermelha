@@ -12,8 +12,11 @@ const postControllerADM = require('./src/controllers/postController/postControll
 //views
 const viewsController = require('./src/controllers/viewsController/viewsController');
 const requiredLogin = require('./src/middleware/middleware');
+//Fotos
+const fotosController = require('./src/controllers/FotosController/fotosController');
+//middlewareMULTER
 
-
+const uploadMulter = require('./src/middleware/uploadMulter');
 //user
 route.post('/register', userController.store)
 route.put('/register/:id', requiredLogin, userController.updated)
@@ -44,5 +47,9 @@ route.post('/views',requiredLogin, viewsController.store)
 route.put('/views/:id', viewsController.updated)
 route.delete('/views/:id',requiredLogin, viewsController.delete)
 route.get('/views/:id',requiredLogin, viewsController.show)
+
+
+route.post('/images', uploadMulter)
+route.get('/images', fotosController.index)
 
 module.exports = route;

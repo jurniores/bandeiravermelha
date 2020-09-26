@@ -9,19 +9,23 @@ function Bottom ({ dados }){
 
     return(
 <div className="div-block">
-            {dados.length>0&&(
+            {dados.length>6&&(
                 <div className="div-bottom-inicial">
         
                 <div className="bottom-div-propriedades space1" >
-                 <Link to="/noticias"><img  src="https://ocnoticias.com.br/wp-content/uploads/2019/10/aborto3-622x420.jpg" alt="imagem da container economia"/></Link>        
-                 <Link to="/noticias"><div className="title-bottom">{dados[0].title}</div></Link>
-                 <Link to="/noticias"><div className="desc-bottom">{dados[0].desc}</div></Link>
+                <Link to={`/noticias/${dados[5].slug}`}>
+                 <img  src={`http://143.255.73.80:3001/images/${dados[5].Foto.name}`} alt="imagem da container economia"/>        
+                 <div className="title-bottom">{dados[5].title}</div>
+                 <div className="desc-bottom">{dados[5].desc}</div>
+                 </Link>
                     <hr/>
                     </div>
                     <div className="bottom-div-propriedades space1">
-                    <Link to="/noticias"><img src="https://ocnoticias.com.br/wp-content/uploads/2020/08/pilula-622x420.jpg" alt="imagem do container economia"/></Link>
-                    <Link to="/noticias"><div className="title-bottom">{dados[1].title}</div></Link>
-                    <Link to="/noticias"><div className="desc-bottom">{dados[1].desc}</div></Link>    
+                    <Link to={`/noticias/${dados[6].slug}`} >
+                    <img src={`http://143.255.73.80:3001/images/${dados[6].Foto.name}`} alt="imagem do container economia"/>
+                    <div className="title-bottom">{dados[6].title}</div>
+                    <div className="desc-bottom">{dados[6].desc}</div>   
+                    </Link> 
                     <hr/>    
                     </div>
                 

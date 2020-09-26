@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+
 
 import './ComponentNoticiasPath.css';
 
@@ -11,15 +13,18 @@ import Covid from '../Modules/Covid19Component/Covid19Component';
 import Delay from '../CarregandoComponent/CarregandoComponent';
 import ComponentRelacionados from '../ComponentRelacionados/ComponentRelacionados';
 import Footer from '../FooterComponent/FooterComponent';
-import Facebook from '../ComponentFacebook/Facebook';
-import Noticias from '../../pages/PageNoticias/PageNoticias';
+
+
 
 function NoticiasPath () {
 
-    const { slug }  = useParams()
-    const [ Reload, setReload] = useState(false)
-    const [ users, setUsers] = useState(false)
-    const dataRedux = useSelector(state=>state.Aside)
+    const { slug }  = useParams();
+    const [ Reload, setReload] = useState(false);
+    const [ users, setUsers] = useState(false);
+    const dataRedux = useSelector(state=>state.Aside);
+    
+   
+
 
     const [ MaisLidas, getLidas ] =MAISLIDAS()
     const [covidData, getCovid] = Covid()
@@ -29,10 +34,18 @@ function NoticiasPath () {
     const [ , getView] = AxiosRequest()
     const [ DadosNoticias, getNoticias] = AxiosRequest()
     const [ text, setText] =useState(false)
-    const [ text2, setText2] =useState(false)
+
     
     
     const dispatch = useDispatch()
+
+    function datePTBR(date){	
+    const data2 = date.split('T')
+    const dataPTBR = data2[0].split('-').reverse().join('/')
+    return [dataPTBR, data2[1]]
+    }
+
+    
 
     useEffect(()=>{
        if(DadosNoticias) {
@@ -68,6 +81,7 @@ function NoticiasPath () {
 
 
     useEffect(()=>{
+        
         if(localStorage.getItem('users')) {
             if(localStorage.getItem('users').length>0){
                 setUsers(JSON.parse(localStorage.getItem('users')))
@@ -81,13 +95,10 @@ function NoticiasPath () {
             method: 'get'
         })
         
-
+        
     },[Reload])
-
+    FB.XFBML.parse()
     useEffect(()=>{
-       
-        
-        
         
         if(MaisLidas.length>0 && covidData.length>0) {
             dispatch({
@@ -125,9 +136,11 @@ function NoticiasPath () {
     }, [MaisLidas, covidData, DadosPost])
 
     return DadosNoticias.id?(
-        document.title= DadosNoticias.title,
+        
         <>
-        <div id="fb-root"></div>
+            
+         
+        
         <div className="noticiasPath-divPrincipal">
             
             <div className="noticiaPath-divSecundaria-block">
@@ -139,15 +152,19 @@ function NoticiasPath () {
                 {DadosNoticias.desc}
                 </h2>
                 <hr/>
-                <img className="noticiaPath-divSecundaria-block-img" src="https://jpimg.com.br/uploads/2019/11/carmen-lucia.jpg"/>
+                <small className="noticiasPath-date">Por <b style={{color: 'red'}}>CN</b>  {datePTBR(DadosNoticias.created_at)[0]} {datePTBR(DadosNoticias.created_at)[1].slice(0,-8)}</small>
+                <hr/>
+                <img className="noticiaPath-divSecundaria-block-img" src={`http://143.255.73.80:3001/images/${DadosNoticias.Foto.name}`}/>
                 
                 {text&&<div className="noticiaPath-divSecundaria-text" dangerouslySetInnerHTML={{__html: text}}>
         
                     </div>}
                
+                <div className="fb-comments" data-href={`http://www.bandeiravermelha.com.br/${DadosNoticias.title.split(' ')[0]}`} data-numposts="5" data-width=""></div>
+                <ComponentRelacionados dadosRelacionados={dadosRelacionados} ativa={()=>{
+                setReload(!Reload)
+            }} />
                 
-                <ComponentRelacionados dadosRelacionados={dadosRelacionados} />
-                <div className = "fb-comments" data-href = "http://www.bandeiravermelha.com.br/" data-numposts = "5" data-width = "" > </div>
             </div>
             <div className="noticiaPath-divSecundaria-block__aside"><Aside ativa={()=>{
                 setReload(!Reload)
