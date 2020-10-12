@@ -16,6 +16,10 @@ module.exports = class Posts extends Model {
                 type: Sequelize.STRING,
                 defaultValue:'',
             },
+            tags: {
+                type: Sequelize.STRING,
+                defaultValue: ''
+            },
             desc: {
                 type: Sequelize.STRING,
                 defaultValue:'',
@@ -38,6 +42,7 @@ module.exports = class Posts extends Model {
         this.belongsTo(models.User, { foreignKey: 'user_id' })
         this.hasOne(models.Views, { foreignKey: 'id_post'})
         this.hasOne(models.Fotos, { foreignKey: 'id_post'})
+        this.hasOne(models.Tags, { foreignKey: 'id_post'})
 
     }
 }

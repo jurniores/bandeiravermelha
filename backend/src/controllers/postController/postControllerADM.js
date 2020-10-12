@@ -9,7 +9,6 @@ module.exports = {
         try {
             const posts= await Post.findAll({
                 where: {user_id: id},
-                attributes:['id','title', 'slug', 'author', 'desc', 'tipo', 'text', 'user_id'],
                 order:[['id','desc']],
                 include: {
                     model: View,

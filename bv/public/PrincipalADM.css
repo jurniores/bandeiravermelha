@@ -1,0 +1,188 @@
+/*Principal adm*/
+.principal-adm{
+   margin: 10px auto;
+   
+}
+/*Lateral*/
+.lateral-adm-principal{   
+   width: 100%;
+   
+}
+.lateral-adm-ul{
+   list-style: none;
+   margin: 0 auto;
+   padding: 0;
+   max-width: 520px;
+
+}
+
+.lateral-adm-li{
+   background-color: rgba(0, 0, 0, 0.473);
+   padding: 10px;
+   display: inline-block;
+   margin: 2px;
+   color: white;
+   border-left: 3px solid white;
+
+}
+/*Postagens AdM*/
+.postagem-principal-adm{
+   display: flex;
+   position: relative;
+   
+}
+.postagem-lateral-esquerda form{
+   display: flex;
+   flex-direction: column;
+}
+
+.postagem-lateral-esquerda select{
+   margin-left: 10px;
+   padding: 3px;
+}
+.postagem-lateral-esquerda input{
+   margin: 10px;
+   height: 30px;
+   padding: 3px;
+   font-size: 13pt;
+}
+.postagem-lateral-direita{
+   width: 50%;
+   margin-left: 30px;
+}
+.postagem-lateral-direita textarea{
+   margin-top: 10px;
+   width: 100%;
+   height: 400px;
+   padding: 10px;
+   font-size: 13pt;
+}
+#button-submit{
+   border-radius: 4px;
+   border: none;
+   outline-color:red;
+   background-color: rgba(35, 218, 35, 0.479);
+}
+.label-img{
+   margin-left: 10px;
+   margin-top: 10px;
+   padding: 3px;
+   font-weight: bold;
+   border-radius: 4px;
+   background-color: rgba(128, 128, 128, 0.432);
+}
+.file-img{
+   display: none;
+}
+.editor-texto{
+   position: absolute;
+   right: 0%;
+   top: 30%;
+   background: rgb(0, 0, 255);
+   color: white;
+   border-top-left-radius: 4px;
+   padding: 10px;
+   font-weight: bold;
+   border-bottom-left-radius: 4px;
+}
+
+/*Minhas postagens*/
+.minhaspostagens-principal{
+   position: relative;
+}
+.div-principal-minhaspostagens{
+   margin: 10px auto;
+   height: 500px;
+   overflow: auto;
+}
+.todas-postagens-adm{
+   width: 450px;
+   margin: 10px auto;
+   background-color: aliceblue;
+   padding: 5px;
+   text-align: center;
+}
+.todas-postagens-adm div{
+   margin: 3px;
+}
+.todas-postagens-adm a{
+   color: unset;
+   text-decoration: none;
+}
+
+.postagem-adm-title{
+   font-weight: 600;
+   color: blue;
+}
+
+.postagem-adm-views{
+   font-size: small;
+   color: red;
+}
+.postagem-adm-desc{
+   font-weight: bold;
+}
+.deleta-edita{
+   justify-content: center;
+   display:flex;
+}
+.deleta-edita div{
+   padding: 3px;
+   color: white;
+   font-weight: bold;
+   border-radius: 4px;
+   cursor: pointer;
+}
+
+.deleta-postadm{
+   background: rgba(255, 0, 0, 0.603);
+   
+}
+.deleta-postadm:hover{
+   background: rgb(255, 0, 0);
+}
+
+.edita-postadm{
+   background: rgba(0, 68, 255, 0.616);
+}
+.edita-postadm:hover{
+   background: rgb(0, 68, 255);
+
+}
+.apagando-post{
+   width: 60px;
+   margin: 0 auto;
+}
+.ativa-delete{
+   position: fixed;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   background-color: rgba(199, 46, 46, 0.918);
+}
+.ativa-delete-div-secundaria{
+  border-radius: 4px;
+  margin: 200px auto;
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  height: 200px;
+  background-color: white;
+  text-align: center;
+  align-items: center;
+}
+
+.ativa-delete-div-secundaria button{
+   margin: 5px;
+   width: 100px;
+   border: none;
+   font-weight: bold;
+   color: white;
+   background-color: red;
+}
+.div-delete-pergunta{
+   padding-top: 30px;
+   padding-bottom: 30px;
+
+}

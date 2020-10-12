@@ -1,0 +1,408 @@
+/*Header*/
+body{
+    margin:0;
+    padding:0
+}
+
+@media screen and (min-width: 916px){
+
+.header-component{
+    width: 100%;
+    min-height: 55px;
+    background: linear-gradient(rgb(255, 0, 0),rgba(255, 0, 0, 0.966));
+    display: flex;
+    z-index: 2;
+    align-items: center;
+    align-content: center;
+    font-family: 'Roboto Slab', sans-serif;
+    justify-content:  space-between;
+    position: relative;
+   
+}
+.animate-header{
+    animation-name: anima;
+    animation-duration: 0.5s;
+    transform: translateY(0px);
+}
+
+@keyframes anima{
+    from{transform: translateY(-40px);}
+    to{transform: translateY(0px);}
+}
+.ul-logo{
+    margin: 0;
+}
+.ul-logo li {
+    font-size: 20pt;
+    font-weight: 1000;
+}
+.ul-contato-login{
+    list-style: none;
+    margin: 10px 0 0 0 ;
+    padding-right: 40px;
+    
+}
+.header-component ul li{
+    display: inline-block;
+    text-align: center;
+    margin-left: 10px;
+    color: white;
+    
+}
+.header-component ul li:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.close-header{
+    height: 50px;
+    margin-bottom: 20px;
+    border-bottom: brown solid 1px;
+    display: flex;
+    justify-content: center;
+}
+.open-header{
+    height: 50px;
+    margin-bottom: 20px;
+    border-bottom: brown solid 1px;
+    display: flex;
+    justify-content: center;
+}
+.header-component__links ul {
+    list-style: none;
+    display: inline-block;
+}
+.header-component__links ul li{
+    display: inline-block;
+    padding:0 10px;
+    font-size: 14pt;
+    font-family: Georgia;
+    cursor: pointer;
+}
+
+.header-component__links ul li:hover{
+    border-bottom: 3px red solid;
+}
+
+.header-component__links a{
+    text-decoration: unset;
+    color: unset;
+}
+
+
+.space-between{
+    margin-right: 200px;
+}
+.rede-sociais:hover{
+    color: rgb(255, 0, 0);
+}
+
+.contato-header{
+    text-decoration: none;
+    color:white;
+}
+
+
+
+.search-header{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 5px;
+    align-items: center;
+    margin: 0;
+    padding: 2px;
+    position: relative;
+
+}
+
+.search-header input {
+    width: 100px;
+    border: none;
+    transition: 0.3s;
+    padding: 3px 10px 0px 10px;
+    height: 100%;
+    font-size: 14px;
+
+    
+}
+.search-header input:focus{
+    outline: 0;
+    width: 200px;
+
+
+}
+
+.search-header  span svg{
+    color: black;
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    padding-right: 10px;
+}
+
+/*Search*/
+
+.search-component-principal{
+    position: absolute;
+    top: 100%;
+    background-color: white;
+    height: 350px;
+    width: 400px;
+    overflow: auto;
+    padding: 10px;
+    right: 10%;
+    border-bottom-right-radius:8px ;
+    border-bottom-left-radius: 8px;
+    box-shadow: 3px 5px 15px rgba(255, 0, 0, 0.521);;
+}
+.search-component-secundaria{
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.search-component-secundaria:hover{
+    background-color: rgba(0, 0, 0, 0.11);
+}
+.search-component-principal a{
+    text-decoration: none;
+}
+.search-component-secundaria-span-search{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 10px;
+    background-color: rgba(255, 0, 0, 0.521);
+    color: black;
+    
+    
+}
+.search-component-secundaria-span-search-title{
+    flex: 1;
+    margin: 10px;
+    color: rgb(85, 85, 85);
+    font-weight: bold;;
+}
+.outline-header{
+    display: none;
+}
+.open-end-close-header{
+    display: none;
+}
+
+}
+@media screen and (max-width: 915px){
+
+    .outline-header{
+        width: 40px;
+        height: 25px;
+        display: inline;
+        cursor: pointer;
+
+    }
+    .header-component{
+        width: 100%;
+        min-height: 100px;
+        background: linear-gradient(rgb(255, 0, 0),rgba(255, 0, 0, 0.966));
+        display: flex;
+        z-index: 2;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+        font-family: 'Roboto Slab', sans-serif;
+        position: relative;
+       
+    }
+    .animate-header{
+        animation-name: anima;
+        animation-duration: 0.5s;
+        transform: translateY(0px);
+    }
+    
+    @keyframes anima{
+        from{transform: translateY(-40px);}
+        to{transform: translateY(0px);}
+    }
+    .ul-logo{
+        margin-left: 10px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        align-content: center;
+    }
+    .ul-logo li {
+        font-size: 20pt;
+        font-weight: 1000;
+    }
+    .ul-contato-login{
+        list-style: none;
+        padding: 0;
+        margin: 10px 10px 10px 0 ;
+
+    }
+   
+   
+    .contato-header{
+        text-decoration: none;
+        color:white;
+    }
+  
+    .header-component ul li{
+        display: inline-block;
+        text-align: center;
+        margin-left: 10px;
+        color: white;
+        cursor: pointer;
+        
+    }
+
+    .close-header{
+        display: none;
+    }
+    
+    
+    .open-header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        width: 100%;
+        height: 100ch;
+        background-color: rgba(51, 50, 50, 0.801);
+        display: block;
+        z-index: 2;
+        text-align: center;
+        border-bottom: brown solid 1px;
+        justify-content: center;
+    }
+  
+    .open-end-close-header{
+        font: 20pt Arial;
+        font-weight: bold;
+        position: absolute;
+        left: 10%;
+        list-style: none;
+        top: 3%;
+        font-size: 20pt;
+        cursor: pointer;
+        color: white;
+    }
+    .header-component__links ul {
+        list-style: none;
+        margin: 70px 20px;
+        padding: 0;
+        display: block;
+    }
+    .header-component__links ul li{
+        display: block;
+        margin: 0 auto;
+        color: white;
+        margin: 10px;
+        padding: 12px 0;
+        background-color: rgb(196, 49, 49);
+        font-size: 14pt;
+        font-family: Georgia;
+        cursor: pointer;
+    }
+    .header-component__links ul li:hover{
+        color: black;
+        background-color: white;
+    }
+    .header-component__links a{
+        text-decoration: unset;
+        color: unset;
+    }
+    
+    
+    .space-between{
+        margin-right: 200px;
+    }
+    .rede-sociais:hover{
+        color: rgb(255, 0, 0);
+    }
+    
+    
+    .search-header{
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        border-radius: 5px;
+        align-items: center;
+        margin: 0;
+        padding: 2px;
+        position: relative;
+    
+    }
+    .search-header input {
+        width: 100px;
+        border: none;
+        transition: 0.3s;
+        padding: 3px 0px 0px 10px;
+        height: 100%;
+        font-size: 14px;
+    
+        
+    }
+    .search-header input:focus{
+        outline: 0;
+        width: 200px;
+    
+    
+    }
+    
+    .search-header  span svg{
+        color: black;
+        position: absolute;
+        top: 10%;
+        right: 0%;
+        padding-right: 10px;
+    }
+    
+    /*Search*/
+    .search-component-principal{
+        position: absolute;
+        top: 100%;
+        background-color: white;
+        height: 350px;
+        left: 10%;
+        width: 80%;
+        overflow: auto;
+        border-bottom-right-radius:8px ;
+        border-bottom-left-radius: 8px;
+        box-shadow: 3px 5px 15px rgba(255, 0, 0, 0.521);;
+    }
+    .search-component-secundaria{
+        border-radius: 4px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    .search-component-secundaria:hover{
+        background-color: rgba(0, 0, 0, 0.11);
+    }
+    .search-component-principal a{
+        text-decoration: none;
+    }
+    .search-component-secundaria-span-search{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin: 10px;
+        background-color: rgba(255, 0, 0, 0.521);
+        color: black;
+        
+        
+    }
+    .search-component-secundaria-span-search-title{
+        flex: 1;
+        margin: 10px;
+        color: rgb(85, 85, 85);
+        font-weight: bold;;
+    }
+
+
+}

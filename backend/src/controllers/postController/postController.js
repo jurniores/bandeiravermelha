@@ -3,6 +3,7 @@ const { resolve } = require('path');
 const Post = require('../../models/PostsModel/PostsModel');
 const View = require('../../models/ViewsModel/ViewsModel');
 const Fotos = require('../../models/FotosModel/FotosModel');
+const Tags = require('../../models/TagsModel/TagsModel');
 const Sequelize = require('sequelize');
 
 const Op = Sequelize.Op
@@ -25,13 +26,15 @@ module.exports = {
     async index(req, res) {
         try {
             const posts= await Post.findAll({
-                attributes:['id','title', 'slug', 'author', 'desc', 'tipo', 'text', 'user_id', 'created_at'],
+                attributes:['id','title','tags', 'slug', 'author', 'desc', 'tipo', 'text', 'user_id', 'created_at'],
                 order:[['id','desc']],
                 include: [{
                     model: View
                 },{
                     model: Fotos,
                     attributes: ["name"]
+                },{
+                    model: Tags,
                 }]
     
             })
@@ -53,13 +56,14 @@ module.exports = {
 
                 const posts= await Post.findAll({
                     where: { tipo },
-                    attributes:['id','title', 'slug', 'author', 'desc', 'tipo', 'text', 'user_id', 'created_at'],
                     order:[['id','desc']],
                     include: [{
                         model: View
                     },{
                         model: Fotos,
                         attributes: ["name"]
+                    },{
+                        model: Tags,
                     }]
                 })
                 if(!posts){
@@ -79,12 +83,13 @@ module.exports = {
         try {
             const posts= await Post.findOne({
                 where: {slug: slug},
-                attributes:['id','title', 'slug', 'author', 'desc', 'tipo', 'text', 'user_id', 'created_at'],
                 include: [{
                     model: View
                 },{
                     model: Fotos,
                     attributes: ["name"]
+                },{
+                    model: Tags,
                 }]
 
             })
@@ -162,8 +167,6 @@ module.exports = {
                     where: {title: {
                         [Op.like]: `%${title}%`
                       } },
-                      
-                    attributes:['id','title', 'slug', 'author', 'desc', 'tipo', 'text', 'user_id'],
                     order:[['id','desc']],
                     include: [{
                         model: View

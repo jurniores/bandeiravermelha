@@ -1,0 +1,358 @@
+/*Home Component*/
+@media screen and (min-width: 601px) and (max-width: 940px){
+    /* Div Destaque */
+    .div-principal-home-component{
+        margin: 0 60px
+    }
+    .div-destaque{
+        display: flex;
+        margin-top: 50px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .materiaPrincipal{
+        width: 49%;
+        height: 300px;
+        margin-bottom: 10px;
+        position: relative;
+        overflow: hidden;
+        
+    }
+    .materiaPrincipal img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.3s;
+        
+    }
+    .materiaPrincipal img:hover{
+        transform: scale(1.1);
+    }
+    
+    .tipo-principal-centro {
+        background-color: red;
+        padding: 4px 10px;
+        color: white;
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        font-weight: bold;
+        font-size: 14pt;
+        
+    }
+    
+.titulo-principal-centro{
+        color: white;
+        text-shadow: 2px 2px 2px black;
+        position: absolute;
+        bottom: 15%;
+        left: 5%;
+        font-size: 16pt;
+        text-align: left;
+    
+    }
+.space-destaque{
+        margin-right: 10px;
+    }
+    /* div- noticias */
+    /*Model Component */
+.modelo-component2 {
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: bold;
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-around;
+    margin-left: 3px;
+    
+    
+    
+    
+}
+    .div-noticias{
+        display: block;
+        margin-bottom: 100px;
+    }
+    .div-todas-matérias{
+        width: 100%;
+        margin: 30px 0;
+        text-align: center;
+        font-size: 25pt;
+        font-family: 'Roboto Slab', sans-serif;
+    
+    }
+    .home-section-central2{
+        width: 48%;
+        margin-bottom: 10px;
+        
+    }
+    .home-section-central2 img{
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        transition: 0.3s; 
+        transform: scale(1.1)   
+    }
+    
+    .home-section-central2 a {
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+    }
+   
+    
+    .home-section-central2 img:hover{
+        transform: scale(1.2);
+    }
+    .display-block{
+        display: block;
+    }
+    .home-titulo2{
+        color: red;
+        margin: 10px 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .home-descricao2 {
+        color:rgb(87, 85, 85);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .aside-noticias{
+        width: 100%;
+        margin: 0 10px 0 10px;
+    }
+    .aside-noticias a{
+        text-decoration: none;
+    }
+    .aside-div-lateral{
+        width: 100%;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(245, 11, 11);
+        font-family: 'Roboto Slab', sans-serif;
+        color:white;
+    }
+    .mais-lidas {
+        min-height: 60px;
+        background-color: rgba(240, 11, 11, 0.514);
+        margin-bottom:20px;
+        padding:4px 10px;
+        text-align: justify;
+        font-size: 14pt;
+        font-family: 'Roboto Slab', sans-serif;
+        color: black;
+    }
+    .mais-lidas span{
+        font-weight: bold;
+        font-size: 16pt;
+    }
+    .mais-lidas:hover{
+        color:white
+    }
+    /*tabela covid*/
+    .tabela-covid {
+        display: flex;
+        width: 100%;
+        background-color: rgba(240, 11, 11, 0.514);
+        border-radius: 10px;
+        min-height: 100px;
+        padding: 30px 0;
+        flex-wrap: wrap;
+        font-size: 11pt;
+        font-family: 'Roboto Slab', sans-serif;
+        
+    }
+    .div-covid{
+        width: 100%;
+        font-family: 'Roboto Slab', sans-serif;
+        font-weight: bold;
+        font-size: 20pt;
+        text-align: center;
+    }
+    
+    .tabela-covid  span{
+        padding: 10px;
+        font-weight: bold;
+        
+    }
+    .tabela-nome {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .tabela-pais {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-items: right;
+    }
+    
+    
+    .div-dados{
+        flex: 1;
+        width: 100%;
+        min-height: 30px;
+        background-color: white;
+        margin: 10px 10px;
+        border-radius: 4px;
+        padding: 5px 10px;
+        text-align: justify;
+        
+    }
+
+    /*Bottom Others*/
+.div-block {
+    text-align: center;
+    font-size: 30pt;
+    font-family: 'Roboto Slab', sans-serif;
+    
+}
+.div-block  a{
+    text-decoration: none;
+}
+.div-bottom-inicial {
+    display: block;
+    justify-content: space-between;
+
+}
+.space1{
+    margin: 10px;
+}
+.bottom-div-propriedades img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: 0.3s;
+}
+.bottom-div-propriedades img:hover{
+    transform: scale(1.02);
+}
+.bottom-div-propriedades{
+    flex: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+
+.title-bottom {
+    font-size: 16pt;
+    font-weight: bold;
+    color: red;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+
+}
+.desc-bottom {
+    font-size: 15pt;
+    font-weight: bold;
+    color: rgb(87, 85, 85);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+}
+.bottom-div-propriedades div{
+    margin-top: 10px;
+}
+
+/*Home component Justiça e Política*/
+
+.div-principal__maior{
+    width: 100%;
+    display: flex;
+    margin-left: 5px;
+    position: relative;
+    overflow: hidden;
+
+}
+.div-principal__maior a{
+    width: 100%;
+    height: 350px;
+    
+}
+.div-principal__maior img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.2s;
+}
+.div-principal__maior img:hover{
+    transform: scale(1.05);
+}
+
+
+.div-principal{
+    display: block;
+    font-family: 'Roboto Slab', sans-serif; 
+    margin-top: 40px;
+    
+}
+.div-principal span{
+    display: block;
+}
+
+.div-principal__maior-primeira{
+    width: 100%;
+    flex: 1;   
+    display: flex;
+}
+
+.div-principal__maior-primeira-interno{  
+    flex: 1;
+    position: relative;
+    height: 230px;
+    overflow: hidden;
+    margin: 3px;
+    margin-bottom: 10px;
+    
+    
+    
+}
+
+.div-principal__maior-primeira-interno img{
+    height: 100%;
+    object-fit: cover;
+}
+.div-principal__maior-primeira-interno img:hover{
+    transform:scale(1.05);
+    
+}
+
+.spacing-bottom{
+    margin-bottom: 3px;
+}
+.div-titulo{
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    font-size: 16pt;
+    
+}
+.div-tipo{
+    background-color: red;
+    padding: 4px 10px;
+    color: white;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    font-weight: bold;
+}
+
+.size{
+    font-size: 22pt;
+}
+    
+}
