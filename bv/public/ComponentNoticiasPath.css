@@ -45,10 +45,7 @@
         line-height: 1.5;
         word-spacing: 5px;
     }
-    .noticiaPath-divSecundaria-block__aside{
-        
-    
-    }
+  
     .views-postagem-noticias-path{
         color: red;
     }
@@ -183,7 +180,6 @@
     word-spacing: 5px;
 }
 .noticiaPath-divSecundaria-block__aside{
-    margin-left: 30px;
     width: 400px;
 
 }

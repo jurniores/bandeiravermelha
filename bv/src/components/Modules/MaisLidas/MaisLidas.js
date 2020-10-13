@@ -17,7 +17,7 @@ function ContView() {
         //cobtendo o mês da postagem
         const date = new Date()
         const month = (date.getMonth(0)+1)
-        const dateDay = date.getDate()-7
+        const dateDay = date.getDate()-13//-7
         
     
         //definindo uma variável de conta

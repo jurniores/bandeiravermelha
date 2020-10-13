@@ -58,7 +58,9 @@
         }
         .noticiasPath-tags{
             
+            flex-wrap: wrap;
             margin: 50px 0;
+            justify-content: space-around;
         
         }
         .noticiasPath-tags-name{
@@ -67,12 +69,12 @@
             font-size: 14pt;
             background-color: rgb(253, 27, 27);
             box-shadow: 3px 3px 5px gray;
-        
             color: white;
         }
         .noticiasPath-tags-tags{
-            margin: 5px;
-            padding: 3px 10px;
+            padding: 3px 3px;
+            margin: 3px 3px;
+            display: inline-block;
             box-shadow: 3px 3px 5px gray;
             border-radius: 4px;
             background-color: rgb(253, 27, 27);;
@@ -85,6 +87,7 @@
         }
         .text-decoration-a-noticias-path{
             text-decoration: none;
+            margin: 20px 0;
         }
         .tags-noticias{
             font-size: 20pt;
@@ -136,7 +139,7 @@
     
     }
 
-    @media screen and (min-width: 601px) and (max-width:975px) {
+    @media screen and (min-width: 601px) and (max-width:999px) {
         .noticiasPath-divPrincipal{
             margin: 50px 30px;
             display: block;
@@ -184,8 +187,8 @@
             word-spacing: 5px;
         }
         .noticiaPath-divSecundaria-block__aside{
-            width: 80%;
-            margin-left: 80px;
+            margin: 80px auto;
+            
             
         }
         .noticiaPath-divSecundaria-block__aside aside{
@@ -277,7 +280,7 @@
             }
     
 
-    @media screen and (min-width: 976px) {
+    @media screen and (min-width: 1000px) {
 .noticiasPath-divPrincipal{
     margin: 50px 30px;
     display: flex;
@@ -285,7 +288,7 @@
     
 }
 .noticiaPath-divSecundaria-block{
-    width: 1000px;
+    width: 70%;
     
 }
 .noticiaPath-divSecundaria-block-img{
@@ -378,8 +381,9 @@
     font-style: italic;
     display: flex;
     color: #929191;
-    margin-left: 80px;
-    width: 80%;
+    width: 100%;
+    justify-content: center;
+    
     
 }
 .fb-share-button-2{

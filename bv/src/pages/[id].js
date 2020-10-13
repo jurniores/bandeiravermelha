@@ -3,7 +3,7 @@ import ComponentNoticias from '../components/ComponentNoticias/ComponentNoticias
 import Head from 'next/head';
 
 
-export default function Noticias({DadosNoticias, post, PernambucoCovid, BrasilCovid}){
+export default function Noticias({params, DadosNoticias, post, PernambucoCovid, BrasilCovid}){
 
     const router = useRouter()
     const { id } = router.query
@@ -22,6 +22,7 @@ export default function Noticias({DadosNoticias, post, PernambucoCovid, BrasilCo
     post={post}
     PernambucoCovid={PernambucoCovid}
     BrasilCovid={BrasilCovid}
+    params={params}
     />
     </>
     )
@@ -47,6 +48,7 @@ export async function getStaticProps({params}) {
           post,
           PernambucoCovid:PernambucoCovid,
           BrasilCovid:BrasilCovid.data,
+          params: params.id
         },
       }
 

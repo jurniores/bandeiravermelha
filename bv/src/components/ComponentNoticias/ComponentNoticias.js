@@ -5,11 +5,19 @@ import { useState } from 'react';
 
 
 
-function ComponentNoticias ({DadosNoticias, post, BrasilCovid, PernambucoCovid}) {
+function ComponentNoticias ({params, DadosNoticias, post, BrasilCovid, PernambucoCovid}) {
     
     const [ carregaMais, setCarregaMais] = useState(8)
     
-    
+    function titulo(n){
+        switch(n){
+            case 'noticias': return 'Notícias'
+            case 'economia': return 'Economia'
+            case 'politica': return 'Política'
+            case 'justica': return 'Justiça'
+            case 'educacao': return 'Educação'
+        }
+    }
  
 
 
@@ -30,9 +38,11 @@ function ComponentNoticias ({DadosNoticias, post, BrasilCovid, PernambucoCovid})
     
     return (
         <>
-        <div className="component-noticias-principal">
+        <h1 className="titulo-page">{titulo(params)}</h1>
+        
+        <div className="component-noticias-principal">        
             <div className="div-separadora">
-                
+                        
           
         {DadosNoticias&&
                 DadosNoticias.map((valor,index) =>(

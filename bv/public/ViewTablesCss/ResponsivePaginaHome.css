@@ -125,7 +125,7 @@
     
     .aside-noticias{
         width: 100%;
-        margin: 0 10px 0 10px;
+        margin: 70px 10px 0 10px;
     }
     .aside-noticias a{
         text-decoration: none;
@@ -136,14 +136,15 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: rgb(245, 11, 11);
+        background-color: gray;
         font-family: 'Roboto Slab', sans-serif;
         color:white;
+        font-size: 14pt;
     }
     .mais-lidas {
         min-height: 60px;
-        background-color: rgba(240, 11, 11, 0.514);
-        margin-bottom:20px;
+        border-bottom: 1px gray solid;
+        margin-bottom:5px;
         padding:4px 10px;
         text-align: justify;
         font-size: 14pt;
@@ -155,19 +156,18 @@
         font-size: 16pt;
     }
     .mais-lidas:hover{
-        color:white
+        color:gray
     }
     /*tabela covid*/
     .tabela-covid {
         display: flex;
         width: 100%;
-        background-color: rgba(240, 11, 11, 0.514);
-        border-radius: 10px;
         min-height: 100px;
-        padding: 30px 0;
+        padding: 10px 0;
         flex-wrap: wrap;
         font-size: 11pt;
         font-family: 'Roboto Slab', sans-serif;
+        border-bottom: 1px gray solid;
         
     }
     .div-covid{
@@ -311,9 +311,9 @@
 .div-principal__maior-primeira-interno{  
     flex: 1;
     position: relative;
-    height: 230px;
+    height: 200px;
     overflow: hidden;
-    margin: 3px;
+    margin: 5px;
     margin-bottom: 10px;
     
     
